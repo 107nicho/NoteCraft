@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "notecraft",
+	"version": "${version}",
+	"name": "NoteCraft",
+	"description": "Take notes.",
+	"authors": [
+		"107nicho",
+		"Daggerdiego107"
+	],
+	"contributors": [
+		"Karmakayx (graphic design)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/107nicho/NoteCraft"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/notecraft/nc-icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"net.ndk.notecraft.NoteCraft"
+		],
+		"client": [
+			"net.ndk.notecraft.NoteCraftClient"
+		]
+	},
+	"mixins": [
+		"notecraft.mixins.json",
+		{
+			"config": "notecraft.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
